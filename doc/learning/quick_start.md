@@ -122,13 +122,14 @@ Here is the content of `root.js` and `main.js`:
 
 ```js
 // root.js ----------------------------------------------------------------------
-const { Component, mount, xml } = owl;
+const { Component, xml } = owl;
 
 export class Root extends Component {
   static template = xml`<div>Hello Owl</div>`;
 }
 
 // main.js ---------------------------------------------------------------------
+const { mount } = owl;
 import { Root } from "./root.js";
 
 mount(Root, document.body);
